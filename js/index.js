@@ -41,13 +41,22 @@ $(function  () {
 		if($(this).hasClass("btndone")){
 			$(this).parent().removeClass("done");
 			$(this).removeClass("btndone");
-			arr[$(this).index()].state=0;
+			arr[$(this).parent().index()].state=0;
 			localStorage.todos=JSON.stringify(arr);
 		}else{
 			$(this).parent().addClass("done");
 			$(this).addClass("btndone");
-			arr[$(this).index()].state=1;
+			arr[$(this).parent().index()].state=1;
 			localStorage.todos=JSON.stringify(arr);
+		}
+	})
+	$(".fixed").on("touchend",function  () {
+		if($(this).html()=="隐藏已完成的项目"){
+			$(".done").hide();
+			$(this).html("显示已完成的项目");
+		}else{
+			$(".done").show();
+			$(this).html("隐藏已完成的项目");
 		}
 	})
 })

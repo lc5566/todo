@@ -68,19 +68,19 @@ body {
   line-height: 1.67rem;
   padding-left: 5px;
   background: transparent;
-  font-size: 0.4rem; }
+  font-size: 0.5rem; }
 
 .add {
   position: absolute;
   top: 0;
   bottom: 0;
   margin: auto;
-  height: 0.7rem;
-  width: 0.7rem;
-  font-size: 0.7rem;
-  left: 0.6rem;
+  height: 1rem;
+  width: 1rem;
+  font-size: 1rem;
+  left: 0.45rem;
   color: #ccc;
-  line-height: 0.7rem;
+  line-height: 1rem;
   text-align: center;
   vertical-align: middle; }
 
@@ -94,7 +94,7 @@ body {
   height: 1.67rem;
   padding-left: 0.6rem;
   line-height: 1.67rem;
-  font-size: 0.4rem; }
+  font-size: 0.5rem; }
   #ul li .btn {
     position: absolute;
     top: 0;
@@ -118,7 +118,7 @@ li .content {
   width: 10.95rem;
   float: right;
   line-height: 1.67rem;
-  padding-left: 5px; }
+  padding-left: 10px; }
 
 li.done .content {
   text-decoration: line-through;
@@ -140,3 +140,15 @@ li.done .content {
 
 .active {
   animation: delete 0.8s ease-in-out both; }
+
+.fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 1.13rem;
+  line-height: 1.13rem;
+  text-align: center;
+  font-size: 0.4rem;
+  color: #0378f9;
+  width: 100%;
+  border-top: 1px dashed #cacaca; }
