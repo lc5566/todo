@@ -28,10 +28,12 @@ $(function  () {
 	
 	ul.on("touchend","li",function  (e) {
 		var end=e.originalEvent.changedTouches[0].clientX;
-		if(Math.abs(end-start)>50){
+		if(end-start>50){
 			arr.splice($(this).index(),1);
 			localStorage.todos=JSON.stringify(arr);
-			$(this).remove();
+			$(this).addClass("active").delay(800).queue(function  () {
+				$(this).remove().dequeue();
+			});
 		}
 	})
 	ul.on("touchend",".btn",function  (e) {
